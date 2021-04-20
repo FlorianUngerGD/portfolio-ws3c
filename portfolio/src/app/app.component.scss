@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: row;
     height: 100%;
+    overflow: hidden;
 
-    // SCSS für mobile (muss NACH dem Desktop SCSS kommen)
+    // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
     @media only screen and (max-device-width: 480px) {
         flex-direction: column;
     }
@@ -15,11 +16,6 @@
     flex-grow: 1;
     height: 100%;
     overflow: hidden;
-
-    // SCSS für mobile (muss NACH dem Desktop SCSS kommen)
-    @media only screen and (max-device-width: 480px) {
-        height: auto;
-    }
 
     &.active {
         flex-grow: 10;
@@ -35,5 +31,10 @@
 
     &#expand-3 {
         background-color: orangered;
+    }
+
+    // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
+    @media only screen and (max-device-width: 480px) {
+        height: auto;
     }
 }
