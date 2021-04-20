@@ -22,7 +22,7 @@
     }
 
     &#expand-1 {
-        background-color: turquoise;
+        background-color: white;
     }
 
     &#expand-2 {
@@ -32,6 +32,12 @@
     &#expand-3 {
         background-color: orangered;
     }
+
+  .img {
+    width: 100px;
+    height: 250px;
+    alignment: center;
+  }
 
     // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
     @media only screen and (max-device-width: 480px) {
