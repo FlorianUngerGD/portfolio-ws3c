@@ -10,6 +10,10 @@
     }
 }
 
+h2{
+  color: white;
+}
+
 .expandable-container {
     padding: 8px;
 
@@ -22,20 +26,20 @@
     }
 
     &#expand-1 {
-        background-color: white;
+        background-color: #005C7C;
     }
 
     &#expand-2 {
-        background-color: yellow;
+        background-color: #F5927E;
     }
 
     &#expand-3 {
-        background-color: orangered;
+        background-color: #448087;
     }
 
   .img {
-    width: 100px;
-    height: 250px;
+    width: 300px;
+    height: 650px;
     alignment: center;
   }
 
