@@ -1,54 +1,14 @@
 :host {
-    display: flex;
-    flex-direction: row;
     height: 100%;
-    overflow: hidden;
-
-    // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-    @media only screen and (max-device-width: 480px) {
-        flex-direction: column;
-    }
+    width: 100%;
 }
 
-h2{
-  color: white;
+app-root {
+    height: 100%;
+    width: 100%;
 }
 
-.expandable-container {
-    padding: 8px;
-
-    flex-grow: 1;
-    transition: 0.5s;
-    animation-timing-function: ease-in;
+router-outlet {
     height: 100%;
-    overflow: hidden;
-
-    &:hover {
-        flex-grow: 10;
-        transition: 0.5s;
-        animation-timing-function: ease-in;
-    }
-
-    &#expand-1 {
-        background-color: #005C7C;
-    }
-
-    &#expand-2 {
-        background-color: #F5927E;
-    }
-
-    &#expand-3 {
-        background-color: #448087;
-    }
-
-  .img {
-    width: 300px;
-    height: 650px;
-    alignment: center;
-  }
-
-    // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-    @media only screen and (max-device-width: 480px) {
-        height: auto;
-    }
+    width: 100%;
 }
