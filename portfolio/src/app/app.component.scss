@@ -18,11 +18,15 @@ h2{
     padding: 8px;
 
     flex-grow: 1;
+    transition: 0.5s;
+    animation-timing-function: ease-in;
     height: 100%;
     overflow: hidden;
 
-    &.active {
+    &:hover {
         flex-grow: 10;
+        transition: 0.5s;
+        animation-timing-function: ease-in;
     }
 
     &#expand-1 {
