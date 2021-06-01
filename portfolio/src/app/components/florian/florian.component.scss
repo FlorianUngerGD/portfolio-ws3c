@@ -1,0 +1,11 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow: hidden;
+
+    // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
+    @media only screen and (max-device-width: 480px) {
+        flex-direction: column;
+    }
+}
