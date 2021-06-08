@@ -1,167 +1,68 @@
 :host {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    overflow: hidden;
-
-        --imgPaddingBottom: 30px;
-        --imgSpaceBottom: 0px;
-        --imgPosition: fixed;
-
-    // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-    @media only screen and (max-device-width: 480px) {
-        flex-direction: column;
-
-    }
-}
-
-#expand-1 {
-    background-color: #F5927E;
-
-    // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-    @media only screen and (max-device-width: 480px) {
-
-
-    }
-}
-
-#expand-2 {
-    background-color: #FFE2DC;
-
-    // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-    @media only screen and (max-device-width: 480px) {
-    }
-}
-
-#expand-3 {
-    background-color: #F5927E;
-
-    // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-    @media only screen and (max-device-width: 480px) {
-    }
-}
-
-.imgNadja {
-    height: 650px;
-    alignment: center;
-
-    // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-    @media only screen and (max-device-width: 480px) {
-    }
-}
-
-.heatherNadja{
-  color: black;
-
-  // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-  @media only screen and (max-device-width: 480px) {
-  }
-}
-
-.h2{
-  font-family: sans-serif;
-
-    // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-    @media only screen and (max-device-width: 480px) {
-    }
-}
-
-.einleitung{
-  color: black;
-  text-decoration: none;
-  font-family: sans-serif;
-
-    // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-    @media only screen and (max-device-width: 480px) {
-    }
-}
-
-.textNadja{
-   color: black;
-   text-decoration: none;
-   font-family: sans-serif;
-
-     // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-     @media only screen and (max-device-width: 480px) {
-     }
-}
-
-
-/* linke Spalte */
-.imgNadja1 {
-    height: 450px;
-    alignment: center;
-
-    position: var(--imgPosition);
-    bottom: var(--imgSpaceBottom);
-    padding-bottom: var(--imgPaddingBottom);
-
-      // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-      @media only screen and (max-device-width: 480px) {
-      }
-}
-
-.row1 {
   display: flex;
+  flex-direction: row;
+  height: 100%;
+  overflow: hidden;
 
-    // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-    @media only screen and (max-device-width: 480px) {
+
+  @media only screen and (max-device-width: 450px) {
+    flex-direction: column;
+    .img {
+      height: 250px;
+      display: block;
+      margin: 0 auto;
     }
+
+    a {
+      display: flex;
+      justify-content: center;
+    }
+    p {
+      font-size: 15px;
+      margin: 98px auto auto 0;
+      color: black;
+      text-decoration: none;
+      font-family: sans-serif;
+    }
+
+  }
 }
 
-.column1 {
-  flex: 50%;
-
-    // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-    @media only screen and (max-device-width: 480px) {
-    }
-}
-
-/* mittlere Spalte */
-.imgNadja2 {
+@media only screen and (min-device-width: 450px) {
+  .img {
     height: 450px;
-    alignment: center;
-    transform: scaleX(-1);
-
-    position: var(--imgPosition);
-    bottom: var(--imgSpaceBottom);
-    padding-bottom: var(--imgPaddingBottom);
-
-      // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-      @media only screen and (max-device-width: 480px) {
-      }
-}
-
-.row2 {
-  display: flex;
-
-  // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-  @media only screen and (max-device-width: 480px) {
-  }
-}
-
-.column2 {
-  flex: 50%;
-
-  // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-  @media only screen and (max-device-width: 480px) {
-  }
-}
-
-/* rechte Spalte */
-.imgNadja3 {
-    //height: 650px;
-    width: 334.917px;
     alignment: right;
     transform: scaleX(-1);
 
     position: var(--imgPosition);
     bottom: var(--imgSpaceBottom);
     padding-bottom: var(--imgPaddingBottom);
+  }
 
-      // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-      @media only screen and (max-device-width: 480px) {
-      }
+  p {
+    font-size: 18px;
+    margin: 98px auto auto 0;
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+  }
+
+}
+
+
+#expand-1 {
+  background-color: #F5927E;
+  flex-direction: row-reverse;
+}
+
+#expand-2 {
+  background-color: #FFE2DC;
+  flex-direction: row-reverse;
+}
+
+#expand-3 {
+  background-color: #F5927E;
+  flex-direction: row-reverse;
 }
 
 

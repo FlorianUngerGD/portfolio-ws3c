@@ -1,27 +1,43 @@
 :host {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  overflow: hidden;
 
-    // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-    @media only screen and (max-device-width: 480px) {
-        flex-direction: column;
+  // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
+  @media only screen and (max-device-width: 450px) {
+    flex-direction: column;
+    .img {
+      height: 250px;
+      display: block;
+      margin: 0 auto;
     }
+    a{
+      display: flex;
+      justify-content: center;
+    }
+    h2 {
+      font-size: 18px;
+      margin: 98px auto auto 0;
+    }
+  }
 }
 
-a{
+a {
   text-decoration: none;
 }
 
 #expand-1 {
-    background-color: #005C7C;
+  background-color: #005C7C;
 }
 
 #expand-2 {
-    background-color: #F5927E;
+  background-color: #F5927E;
 }
 
 #expand-3 {
-    background-color: #448087;
+  background-color: #448087;
 }
+
+
+

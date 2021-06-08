@@ -16,7 +16,6 @@ h2{
 .expandable-container {
     padding: 8px;
 
-    flex-grow: 1;
     transition: 0.5s;
     animation-timing-function: ease-in;
     height: 100%;
@@ -29,13 +28,14 @@ h2{
     }
 
   .img {
-    height: 650px;
+    height: 450px;
     alignment: center;
   }
 
     // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
-    @media only screen and (max-device-width: 480px) {
+    @media only screen and (max-device-width: 450px) {
         height: auto;
+
     }
 }
 
