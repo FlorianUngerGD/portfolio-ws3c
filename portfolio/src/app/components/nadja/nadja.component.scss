@@ -50,20 +50,90 @@
 }
 
 
+/*******************Expand 1************************************/
 #expand-1 {
-  background-color: #F5927E;
+  background-color: #F5927D;
   flex-direction: row-reverse;
+  padding-top: 100px;
+  padding-left: 100px;
+
+
 }
+
+@media only screen and (max-device-width: 450px) {
+
+  #expand-1 {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+
+/*******************Expand 2************************************/
 
 #expand-2 {
   background-color: #FFE2DC;
   flex-direction: row-reverse;
+  padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+
 }
 
-#expand-3 {
-  background-color: #F5927E;
-  flex-direction: row-reverse;
+@media only screen and (max-device-width: 450px) {
+  #expand-2 {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
 }
+
+
+/*******************Expand 3************************************/
+
+#expand-3 {
+  background-color: #F5927D;
+  flex-direction: row-reverse;
+  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 100px;
+
+}
+
+@media only screen and (max-device-width: 450px) {
+  #expand-3 {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+/*******************Spalten Layout************************************/
+
+/*Von Nadja ergänzt*/
+.row {
+  display: inline-flex;
+  column-gap: 20px;
+}
+
+.column {
+}
+
+
+@media only screen and (max-device-width: 450px) {
+  .row {
+
+  }
+
+  .column {
+
+  }
+}
+
 
 
 
