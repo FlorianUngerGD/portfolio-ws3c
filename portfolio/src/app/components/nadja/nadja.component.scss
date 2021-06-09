@@ -1,16 +1,72 @@
 :host {
+
+    /* Variablen */
+    --bildNichtSpiegelverkehrt: scaleX(1);
+    --bildSpiegelverkehrt: scaleX(-1);
+
+    /* nadja */
+    --textColor: black;
+    --bgColor1: #F5927D;
+    --bgColor2: #FFE2DC;
+    --bild1DesktopSpiegelverkehrt: scaleX(1); /* -1 ist spiegelverkehrt*/
+    --bild2DesktopSpiegelverkehrt: scaleX(-1);
+    --bild3DesktopSpiegelverkehrt: scaleX(-1);
+    --bild1MobileSpiegelverkehrt: scaleX(1);
+    --bild2MobileSpiegelverkehrt: scaleX(-1);
+    --bild3MobileSpiegelverkehrt: scaleX(-1);
+
+   /*elena:
+   --textcolor: white;
+   --bgColor1: #0184b3;
+   --bgColor2: #FFE2DC;
+   --bild1DesktopSpiegelverkehrt: scaleX(1);
+   --bild2DesktopSpiegelverkehrt: scaleX(1);
+   --bild3DesktopSpiegelverkehrt: scaleX(1);
+   --bild1MobileSpiegelverkehrt: scaleX(1);
+   --bild2MobileSpiegelverkehrt: scaleX(1);
+   --bild3MobileSpiegelverkehrt: scaleX(1);
+  */
+
+  /*florian:
+  --textcolor: white;
+  --bgColor1: #448087;
+  --bgColor2: #5FB5BF;
+  --bild1DesktopSpiegelverkehrt: scaleX(1);
+  --bild2DesktopSpiegelverkehrt: scaleX(1);
+  --bild3DesktopSpiegelverkehrt: scaleX(1);
+  --bild1MobileSpiegelverkehrt: scaleX(1);
+  --bild2MobileSpiegelverkehrt: scaleX(1);
+  --bild3MobileSpiegelverkehrt: scaleX(1);
+  */
+
   display: flex;
   flex-direction: row;
   height: 100%;
   overflow: hidden;
-
+  background-color: bgColor1;
 
   @media only screen and (max-device-width: 450px) {
+    background-color: bgColor1;
     flex-direction: column;
-    .img {
+    .img1 {
       height: 250px;
       display: block;
       margin: 0 auto;
+      transform: var(--bild1MobileSpiegelverkehrt);
+    }
+
+    .img2 {
+      height: 250px;
+      display: block;
+      margin: 0 auto;
+      transform: var(--bild2MobileSpiegelverkehrt);
+    }
+
+    .img3 {
+      height: 250px;
+      display: block;
+      margin: 0 auto;
+      transform: var(--bild3MobileSpiegelverkehrt);
     }
 
     a {
@@ -20,122 +76,83 @@
     p {
       font-size: 15px;
       margin: 98px auto auto 0;
-      color: black;
+      color: var(textColor);
       text-decoration: none;
       font-family: sans-serif;
     }
 
+    .content {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
   }
 }
 
 @media only screen and (min-device-width: 450px) {
-  .img {
+  .img1 {
     height: 450px;
     alignment: right;
     transform: scaleX(-1);
+    margin-right: 25px;
+    margin-left: 25px;
+    transform: var(--bild1DesktopSpiegelverkehrt);
+  }
 
-    position: var(--imgPosition);
-    bottom: var(--imgSpaceBottom);
-    padding-bottom: var(--imgPaddingBottom);
+  .img2 {
+      height: 450px;
+      alignment: right;
+      transform: scaleX(-1);
+      margin-right: 25px;
+      margin-left: 25px;
+      transform: var(--bild2DesktopSpiegelverkehrt);
+  }
+
+  .img3 {
+    height: 450px;
+    alignment: right;
+    transform: scaleX(-1);
+    margin-right: 25px;
+    margin-left: 25px;
+    transform: var(--bild3DesktopSpiegelverkehrt);
   }
 
   p {
     font-size: 18px;
     margin: 98px auto auto 0;
-    color: black;
+    color: var(textColor);
     text-decoration: none;
     font-family: sans-serif;
+
+    margin-right: 25px;
+    margin-left: 25px;
   }
 
 }
 
-
-/*******************Expand 1************************************/
 #expand-1 {
-  background-color: #F5927D;
-  flex-direction: row-reverse;
-  padding-top: 100px;
-  padding-left: 100px;
-
-
+  background-color: var(--bgColor1);
+  display: flex;
+  justify-content: center;
 }
-
-@media only screen and (max-device-width: 450px) {
-
-  #expand-1 {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-  }
-}
-
-
-/*******************Expand 2************************************/
 
 #expand-2 {
-  background-color: #FFE2DC;
-  flex-direction: row-reverse;
-  padding-top: 100px;
-  padding-left: 50px;
-  padding-right: 50px;
+  background-color: var(--bgColor2);
+  display: flex;
+  justify-content: center;
 
 }
-
-@media only screen and (max-device-width: 450px) {
-  #expand-2 {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-  }
-}
-
-
-/*******************Expand 3************************************/
 
 #expand-3 {
-  background-color: #F5927D;
-  flex-direction: row-reverse;
-  padding-top: 100px;
-  padding-left: 20px;
-  padding-right: 100px;
+  background-color: var(--bgColor1);
+  display: flex;
+  justify-content: center;
 
 }
 
-@media only screen and (max-device-width: 450px) {
-  #expand-3 {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-  }
+.content {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
 }
-
-/*******************Spalten Layout************************************/
-
-/*Von Nadja ergänzt*/
-.row {
-  display: inline-flex;
-  column-gap: 20px;
-}
-
-.column {
-}
-
-
-@media only screen and (max-device-width: 450px) {
-  .row {
-
-  }
-
-  .column {
-
-  }
-}
-
-
-
-
-
 
