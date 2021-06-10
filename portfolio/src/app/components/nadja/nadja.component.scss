@@ -43,7 +43,7 @@
   flex-direction: row;
   height: 100%;
   overflow: hidden;
-  background-color: bgColor1;
+  background-color: var(--bgColor1);
 
   @media only screen and (max-device-width: 450px) {
     background-color: bgColor1;
