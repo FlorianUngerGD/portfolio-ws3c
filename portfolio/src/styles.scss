@@ -8,6 +8,17 @@ body {
     height: 100%;
     margin: 0;
     background-color: #448087;
+    font-family: sans-serif;
+}
+
+p {
+  font-size: 18px;
+  margin: 98px auto auto 0;
+  color: var(textColor);
+  text-decoration: none;
+
+  margin-right: 25px;
+  margin-left: 25px;
 }
 
 h2{
@@ -17,21 +28,40 @@ h2{
 .expandable-container {
     padding: 8px;
 
+    flex-basis: 33%;
     transition: 0.5s;
     animation-timing-function: ease-in;
     height: 100%;
     overflow: hidden;
-
-    &:hover {
-        flex-grow: 10;
+    .text-content {
+        white-space: nowrap;
         transition: 0.5s;
         animation-timing-function: ease-in;
+        width: 0;
+        display: block;
+        overflow: hidden;
     }
 
-  .img {
-    height: 450px;
-    alignment: center;
-  }
+    &:hover {
+        flex-basis: 70%;
+        transition: 0.5s;
+        animation-timing-function: ease-in;
+
+        .text-content {
+            transition: 0.5s;
+            animation-timing-function: ease-in;
+            width: 400px;
+            @media only screen and (max-device-width: 450px) {
+                width: 100%;
+        
+            }
+        }
+    }
+
+    .img {
+        height: 450px;
+        alignment: center;
+    }
 
     // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
     @media only screen and (max-device-width: 450px) {
