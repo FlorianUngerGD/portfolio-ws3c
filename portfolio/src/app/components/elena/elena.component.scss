@@ -6,9 +6,19 @@
 
   color: white;
 
+--textcolor: white;
+--bgColor1: #0184b3;
+--bgColor2: #FFE2DC;
+--bild1DesktopSpiegelverkehrt: scaleX(1);
+--bild2DesktopSpiegelverkehrt: scaleX(1);
+--bild3DesktopSpiegelverkehrt: scaleX(1);
+--bild1MobileSpiegelverkehrt: scaleX(1);
+--bild2MobileSpiegelverkehrt: scaleX(1);
+--bild3MobileSpiegelverkehrt: scaleX(1);
+
 
   @media only screen and (max-device-width: 450px) {
-    background-color: bgColor1;
+    background-color: #0184b3;
     flex-direction: column;
     .img1 {
       height: 250px;
@@ -36,6 +46,7 @@
       justify-content: center;
     }
   }
+
 }
 
 @media only screen and (min-device-width: 450px) {

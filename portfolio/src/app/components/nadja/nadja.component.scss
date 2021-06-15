@@ -46,7 +46,7 @@
   background-color: var(--bgColor1);
 
   @media only screen and (max-device-width: 450px) {
-    background-color: bgColor1;
+    --bgColor1: #F5927D;
     flex-direction: column;
     .img1 {
       height: 250px;
