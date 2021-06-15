@@ -93,14 +93,16 @@ h2{
 .content {
   display: flex;
   justify-content: center;
-  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (max-device-width: 450px) {
     .content {
       display: flex;
       justify-content: center;
-      margin-top: 20px;
     }
 }
 
