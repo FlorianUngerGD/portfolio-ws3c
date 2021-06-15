@@ -73,6 +73,12 @@
       display: flex;
       justify-content: center;
     }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
   }
 }
 
@@ -87,12 +93,12 @@
   }
 
   .img2 {
-    height: 450px;
-    alignment: right;
-    transform: scaleX(-1);
-    margin-right: 25px;
-    margin-left: 25px;
-    transform: var(--bild2DesktopSpiegelverkehrt);
+      height: 450px;
+      alignment: right;
+      transform: scaleX(-1);
+      margin-right: 25px;
+      margin-left: 25px;
+      transform: var(--bild2DesktopSpiegelverkehrt);
   }
 
   .img3 {
@@ -115,11 +121,13 @@
   background-color: var(--bgColor2);
   display: flex;
   justify-content: center;
+
 }
 
 #expand-3 {
   background-color: var(--bgColor1);
   display: flex;
   justify-content: center;
+
 }
 
