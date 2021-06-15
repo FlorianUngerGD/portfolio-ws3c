@@ -88,6 +88,21 @@ h2{
     }
 }
 
+.mail-button {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+
+    img {
+        filter: drop-shadow(2px 2px 2px #222);
+        width: 50px;
+        height: auto;
+    }
+}
+
 .content {
   display: flex;
   justify-content: center;
@@ -101,6 +116,15 @@ h2{
     .content {
       display: flex;
       justify-content: center;
+    }
+
+    .mail-button {
+        top: 3%;
+        right: 4%;
+
+        img {
+            width: 40px;
+        }
     }
 }
 
