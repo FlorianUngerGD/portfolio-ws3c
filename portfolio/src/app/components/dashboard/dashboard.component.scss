@@ -1,43 +1,113 @@
 :host {
+
+  /* Variablen */
+  --bildNichtSpiegelverkehrt: scaleX(1);
+  --bildSpiegelverkehrt: scaleX(-1);
+
+  --textcolor: white;
+  --bgColor1: #005C7C;
+  --bgColor2: #F5927E;
+  --bgColor3: #448087;
+  --bild1DesktopSpiegelverkehrt: scaleX(1);
+  --bild2DesktopSpiegelverkehrt: scaleX(1);
+  --bild3DesktopSpiegelverkehrt: scaleX(1);
+  --bild1MobileSpiegelverkehrt: scaleX(1);
+  --bild2MobileSpiegelverkehrt: scaleX(1);
+  --bild3MobileSpiegelverkehrt: scaleX(1);
+  
   display: flex;
   flex-direction: row;
   height: 100%;
   overflow: hidden;
+  background-color: var(--bgColor1);
 
-  // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
   @media only screen and (max-device-width: 450px) {
+    background-color: bgColor1;
     flex-direction: column;
-    .img {
+    .img1 {
       height: 250px;
       display: block;
       margin: 0 auto;
+      transform: var(--bild1MobileSpiegelverkehrt);
     }
-    a{
+
+    .img2 {
+      height: 250px;
+      display: block;
+      margin: 0 auto;
+      transform: var(--bild2MobileSpiegelverkehrt);
+    }
+
+    .img3 {
+      height: 250px;
+      display: block;
+      margin: 0 auto;
+      transform: var(--bild3MobileSpiegelverkehrt);
+    }
+
+    a {
       display: flex;
       justify-content: center;
     }
-    h2 {
-      font-size: 18px;
-      margin: 98px auto auto 0;
+
+    .content {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
     }
   }
 }
 
-a {
-  text-decoration: none;
+@media only screen and (min-device-width: 450px) {
+  .img1 {
+    height: 450px;
+    alignment: right;
+    transform: scaleX(-1);
+    margin-right: 25px;
+    margin-left: 25px;
+    transform: var(--bild1DesktopSpiegelverkehrt);
+  }
+  
+  .img2 {
+    height: 450px;
+    alignment: right;
+    transform: scaleX(-1);
+    margin-right: 25px;
+    margin-left: 25px;
+    transform: var(--bild2DesktopSpiegelverkehrt);
+  }
+  
+  .img3 {
+    height: 450px;
+    alignment: right;
+    transform: scaleX(-1);
+    margin-right: 25px;
+    margin-left: 25px;
+    transform: var(--bild3DesktopSpiegelverkehrt);
+  }
 }
 
 #expand-1 {
-  background-color: #005C7C;
+  background-color: var(--bgColor1);
+  display: flex;
+  justify-content: center;
 }
 
 #expand-2 {
-  background-color: #F5927E;
+  background-color: var(--bgColor2);
+  display: flex;
+  justify-content: center;
 }
 
 #expand-3 {
-  background-color: #448087;
+  background-color: var(--bgColor3);
+  display: flex;
+  justify-content: center;
 }
 
-
+.content {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
 

@@ -11,6 +11,10 @@ body {
     font-family: sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 p {
   font-size: 18px;
   margin: 98px auto auto 0;
@@ -83,6 +87,12 @@ h2{
         width: 100%;
         height: auto;
     }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
 }
 
 
