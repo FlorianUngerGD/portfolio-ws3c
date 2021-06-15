@@ -66,6 +66,7 @@
       height: 250px;
       display: block;
       margin: 0 auto;
+      margin-right: calc(50% - 120px);
       transform: var(--bild3MobileSpiegelverkehrt);
     }
 
@@ -115,7 +116,6 @@
   background-color: var(--bgColor2);
   display: flex;
   justify-content: center;
-
 }
 
 #expand-3 {
@@ -123,5 +123,14 @@
   display: flex;
   justify-content: center;
 
+  @media only screen and (max-device-width: 450px) {
+    &:hover {
+      .img3 {
+        margin-right: -95px;
+        transition: 0.5s;
+        transition-timing-function: ease-out;
+      }
+    }
+  }
 }
 

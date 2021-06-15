@@ -64,7 +64,7 @@
       margin: 0 auto;
       margin-left: calc(50% - 133px);
       transition: 0.5s;
-      animation-timing-function: ease-in;
+      transition-timing-function: ease-out;
       transform: var(--bild2MobileSpiegelverkehrt);
     }
 
@@ -115,6 +115,13 @@
   background-color: var(--bgColor1);
   display: flex;
   justify-content: center;
+  
+  
+  @media only screen and (max-device-width: 450px) {
+    p {
+      margin-left: 0;
+    }
+  }
 }
 
 #expand-2 {
@@ -122,11 +129,13 @@
   display: flex;
   justify-content: center;
 
-  &:hover {
-    .img2 {
-      margin-left: -75px;
-      transition: 0.5s;
-      animation-timing-function: ease-in;
+  @media only screen and (max-device-width: 450px) {
+    &:hover {
+      .img2 {
+        margin-left: -75px;
+        transition: 0.5s;
+        transition-timing-function: ease-out;
+      }
     }
   }
 }

@@ -22,6 +22,10 @@ p {
 
   margin-right: 25px;
   margin-left: 25px;
+  @media only screen and (max-device-width: 450px) {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
 
 h2{
@@ -33,14 +37,15 @@ h2{
 
     flex-basis: 33%;
     transition: 0.5s;
-    animation-timing-function: ease-in;
+    transition-timing-function: ease-out;
     height: 100%;
     overflow: hidden;
     .text-content {
         white-space: nowrap;
         transition: 0.5s;
-        animation-timing-function: ease-in;
+        transition-timing-function: ease-out;
         width: 0;
+        opacity: 0;
         display: block;
         overflow: hidden;
     }
@@ -48,12 +53,17 @@ h2{
     &:hover, &:active {
         flex-basis: 70%;
         transition: 0.5s;
-        animation-timing-function: ease-in;
+        transition-timing-function: ease-out;
+        
+        p {
+            white-space: initial;
+        }
 
         .text-content {
             transition: 0.5s;
-            animation-timing-function: ease-in;
+            transition-timing-function: ease-out;
             width: 400px;
+            opacity: 1;
             @media only screen and (max-device-width: 450px) {
                 width: 100%;
             }
