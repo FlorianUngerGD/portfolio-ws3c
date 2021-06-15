@@ -1,7 +1,7 @@
 :host {
 
     /* Variablen */
-    --bildNichtSpiegelverkehrt: scaleX(1);
+    --bildNichtSpiegelverkehrt: scaleX(1);/**/
     --bildSpiegelverkehrt: scaleX(-1);
 
     /* nadja */
@@ -66,6 +66,7 @@
       height: 250px;
       display: block;
       margin: 0 auto;
+      margin-right: calc(50% - 120px);
       transform: var(--bild3MobileSpiegelverkehrt);
     }
 
@@ -73,35 +74,6 @@
       display: flex;
       justify-content: center;
     }
-    p {
-      font-size: 15px;
-      margin: 98px auto auto 0;
-      color: var(textColor);
-      text-decoration: none;
-      font-family: sans-serif;
-    }
-
-    .content {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .back-button {
-      position: absolute;
-      top: 1%;
-      left: -1%;
-      background: transparent;
-      border: 0;
-      cursor: pointer;
-
-      img {
-        filter: drop-shadow(2.5px 2.5px 2.5px #222);
-        width: 50%;
-        height: auto;
-      }
-    }
-
   }
 }
 
@@ -132,18 +104,6 @@
     margin-left: 25px;
     transform: var(--bild3DesktopSpiegelverkehrt);
   }
-
-  p {
-    font-size: 18px;
-    margin: 98px auto auto 0;
-    color: var(textColor);
-    text-decoration: none;
-    font-family: sans-serif;
-
-    margin-right: 25px;
-    margin-left: 25px;
-  }
-
 }
 
 #expand-1 {
@@ -156,7 +116,6 @@
   background-color: var(--bgColor2);
   display: flex;
   justify-content: center;
-
 }
 
 #expand-3 {
@@ -164,11 +123,14 @@
   display: flex;
   justify-content: center;
 
-}
-
-.content {
-  display: flex;
-  justify-content: center;
-  margin-top: 200px;
+  @media only screen and (max-device-width: 450px) {
+    &:hover {
+      .img3 {
+        margin-right: -95px;
+        transition: 0.5s;
+        transition-timing-function: ease-out;
+      }
+    }
+  }
 }
 

@@ -4,84 +4,87 @@
   height: 100%;
   overflow: hidden;
 
+  color: white;
 
 
   @media only screen and (max-device-width: 450px) {
+    background-color: bgColor1;
     flex-direction: column;
-    .img {
+    .img1 {
       height: 250px;
       display: block;
       margin: 0 auto;
+      transform: var(--bild1MobileSpiegelverkehrt);
+    }
+
+    .img2 {
+      height: 250px;
+      display: block;
+      margin: 0 auto;
+      transform: var(--bild2MobileSpiegelverkehrt);
+    }
+
+    .img3 {
+      height: 250px;
+      display: block;
+      margin: 0 auto;
+      transform: var(--bild3MobileSpiegelverkehrt);
     }
 
     a {
       display: flex;
       justify-content: center;
-
-    p {
-      font-size: 15px;
-      margin: 98px auto auto 0;
-      color: white;
-      text-decoration: none;
-      font-family: sans-serif;
     }
-
-    .back-button {
-      position: absolute;
-      top: 1%;
-      left: -1%;
-      background: transparent;
-      border: 0;
-      cursor: pointer;
-
-      img {
-        filter: drop-shadow(2.5px 2.5px 2.5px #222);
-        width: 50%;
-        height: auto;
-      }
-    }
-    }
-
   }
-
+}
 
 @media only screen and (min-device-width: 450px) {
-  .img {
+  .img1 {
     height: 450px;
     alignment: right;
     transform: scaleX(-1);
-
-    position: var(--imgPosition);
-    bottom: var(--imgSpaceBottom);
-    padding-bottom: var(--imgPaddingBottom);
+    margin-right: 25px;
+    margin-left: 25px;
+    transform: var(--bild1DesktopSpiegelverkehrt);
   }
 
-  p {
-    font-size: 18px;
-    margin: 98px auto auto 0;
-    color: white;
-    text-decoration: none;
-    font-family: sans-serif;
+  .img2 {
+      height: 450px;
+      alignment: right;
+      transform: scaleX(-1);
+      margin-right: 25px;
+      margin-left: 25px;
+      transform: var(--bild2DesktopSpiegelverkehrt);
   }
 
+  .img3 {
+    height: 450px;
+    alignment: right;
+    transform: scaleX(-1);
+    margin-right: 25px;
+    margin-left: 25px;
+    transform: var(--bild3DesktopSpiegelverkehrt);
+  }
 }
 
 
 #expand-1 {
   background-color: #005C7C;
-  flex-direction: row-reverse;
+  display: flex;
+  justify-content: center;
 }
 
 #expand-2 {
   background-color: #0184b3;
-  flex-direction: row-reverse;
+  display: flex;
+  justify-content: center;
 }
 
 #expand-3 {
   background-color: #005C7C;
-  flex-direction: row-reverse;
+  display: flex;
+  justify-content: center;
 }
-
 
 
 

@@ -8,6 +8,24 @@ body {
     height: 100%;
     margin: 0;
     background-color: #448087;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+  font-size: 18px;
+  color: var(textColor);
+  text-decoration: none;
+
+  margin-right: 25px;
+  margin-left: 25px;
+  @media only screen and (max-device-width: 450px) {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
 
 h2{
@@ -17,26 +35,49 @@ h2{
 .expandable-container {
     padding: 8px;
 
+    flex-basis: 33%;
     transition: 0.5s;
-    animation-timing-function: ease-in;
+    transition-timing-function: ease-out;
     height: 100%;
     overflow: hidden;
-
-    &:hover {
-        flex-grow: 10;
+    .text-content {
+        white-space: nowrap;
         transition: 0.5s;
-        animation-timing-function: ease-in;
+        transition-timing-function: ease-out;
+        width: 0;
+        opacity: 0;
+        display: block;
+        overflow: hidden;
     }
 
-  .img {
-    height: 450px;
-    alignment: center;
-  }
+    &:hover, &:active {
+        flex-basis: 70%;
+        transition: 0.5s;
+        transition-timing-function: ease-out;
+        
+        p {
+            white-space: initial;
+        }
+
+        .text-content {
+            transition: 0.5s;
+            transition-timing-function: ease-out;
+            width: 400px;
+            opacity: 1;
+            @media only screen and (max-device-width: 450px) {
+                width: 100%;
+            }
+        }
+    }
+
+    .img {
+        height: 450px;
+        alignment: center;
+    }
 
     // SCSS für mobile (muss NACH dem zu überschreibenden Desktop SCSS kommen)
     @media only screen and (max-device-width: 450px) {
         height: auto;
-
     }
 }
 
@@ -47,11 +88,52 @@ h2{
     background: transparent;
     border: 0;
     cursor: pointer;
+    z-index: 100;
 
     img {
         filter: drop-shadow(5px 5px 5px #222);
         width: 100%;
         height: auto;
+    }
+}
+
+.mail-button {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+
+    img {
+        filter: drop-shadow(2px 2px 2px #222);
+        width: 50px;
+        height: auto;
+    }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-device-width: 450px) {
+    .content {
+      display: flex;
+      justify-content: center;
+    }
+
+    .mail-button {
+        top: 3%;
+        right: 4%;
+
+        img {
+            width: 40px;
+        }
     }
 }
 
