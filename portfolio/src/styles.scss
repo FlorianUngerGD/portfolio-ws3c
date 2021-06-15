@@ -81,6 +81,7 @@ h2{
     background: transparent;
     border: 0;
     cursor: pointer;
+    z-index: 100;
 
     img {
         filter: drop-shadow(5px 5px 5px #222);
@@ -93,6 +94,14 @@ h2{
   display: flex;
   justify-content: center;
   margin-top: 200px;
+}
+
+@media only screen and (max-device-width: 450px) {
+    .content {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
 }
 
 
